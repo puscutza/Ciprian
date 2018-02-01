@@ -1,0 +1,167 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+
+<head runat="server">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src ="https://use.fontawesome.com/21cce5812b.js">
+</script> 
+<style>
+    .header {
+        background-color: #f1f1f1;
+        padding: 30px;
+        text-align: center;
+    }
+body {margin: 0;}
+
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ccdbe5;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+    display: block;
+    color: dodgerblue;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #f3f3f3;}
+
+ul.topnav li a.active {background-color: #4CAF50;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px){
+    ul.topnav li.right, 
+    ul.topnav li {float: none;}
+}
+
+
+.info{
+  width:40%;
+    margin-top: 30px;
+    float:left;
+    margin-left:8%;
+}
+
+/*this is the icon for map, telephone number and email from the footer*/
+.info i {
+color:white;
+padding:15px;
+display: inline;
+}
+
+/*this is for the write*/
+.info p{
+  
+  display: inline;
+  font-family: verdana;
+}
+
+.info a {
+    color:#848481;
+    text-decoration:none;
+}
+
+/*this is the "about us" from the footer section*/
+.social{
+    width: 40%;
+  text-align: center;
+    margin-top: 10px;
+    float:right;
+    margin-right:8%;
+    font-family:verdana;
+}
+
+/*this is the "about us" paragraph*/
+.social p{ 
+color:#848481; 
+text-align: left;}
+ 
+ /*this is "about us" */
+ .social h2{
+  color:white;
+ }
+
+ /*these are the icons*/
+.social i{
+    color:white;
+    padding: 5px;
+}
+ 
+ @media screen and (max-width: 800px){
+  .social{ 
+  width:90%;
+   }
+
+ }
+.footer{
+    background: #504751;
+    padding: 20px;
+    width: 100%;
+    float:left;
+}
+</style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:Image ID="Image1" src="Image/banner.jpg" width="100%" runat="server" />
+    <ul class="topnav">
+  <li><a href="Default.aspx">Home</a></li>
+  <li><a href="Cart.aspx">Cart</a></li>
+  <li><a href="Contact.aspx">Contact</a></li>
+  <li class="right"><a href="Register.aspx">Register</a></li>
+  <li class="right"><a href="Login.aspx">Login</a></li>
+</ul>
+
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+   
+
+    <div class="footer">
+<div class="info">
+    <i class="fa fa-dot-circle-o fa-2x" aria-hidden="true"></i>
+
+
+<p> <a href="hhttp://validator.w3.org/check?uri=referer">Validate HTML</a></p>
+<br>
+<br>
+    <i class="fa fa-dot-circle-o fa-2x" aria-hidden="true"></i>
+    <p><a href="http://jigsaw.w3.org/css-validator/check/refere">Validate CSS</a></p>
+    <br />
+    <br />
+
+      <i class="fa fa-dot-circle-o fa-2x" aria-hidden="true"></i>
+<p>  <a href="Administrator.aspx">Admin</a></p>
+
+</div>
+	<div class="social">
+<h2>About us</h2>
+<p>
+We offer great deals for customers who want to buy a new phone online and get paid quickly thanks to a trade-in process that’s fast, easy and completely hassle-free. Take a look at our unique Samsung & iPhone, or browse our website to find out how much you need to pay for your new Apple or Samsung.</p> 
+
+<i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i>
+<i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
+<i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+</div>
+</div>
+
+
+</body>
+</html>
